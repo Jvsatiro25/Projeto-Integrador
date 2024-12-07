@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda</title>
+    <style>
+        /* Corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header.cabeçario {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #00FF00; /* Fundo verde claro */
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header.cabeçario a {
+            text-decoration: none;
+        }
+
+        header.cabeçario .voltar img {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            filter: invert(17%) sepia(95%) saturate(1568%) hue-rotate(85deg) brightness(67%) contrast(122%); /* Ícone verde escuro */
+        }
+
+        header.cabeçario .voltar img:hover {
+            transform: scale(1.2);
+        }
+
+        header.cabeçario .titulo {
+            font-size: 32px;
+            margin: 0;
+            margin-left: 15px;
+        }
+
+        /* Seção principal */
+        section {
+            padding: 40px 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: normal;
+        }
+
+        section p,
+        section ul {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        section li {
+            margin-bottom: 10px;
+        }
+
+        /* Caixa de pesquisa */
+        .search-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-box button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #00FF00;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #00CC00;
+        }
+
+        /* Categorias de Ajuda */
+        .categories {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-item {
+            margin-bottom: 15px;
+        }
+
+        .category-item h4 {
+            font-size: 20px;
+            color: #444;
+        }
+
+        .category-item p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabeçario">
+        <a href="../index.html" class="voltar">
+            <img src="../img/icon8.png" alt="Voltar">
+        </a>
+        <h2 class="titulo">Central de Ajuda</h2>
+    </header>
+
+    <!-- Caixa de pesquisa -->
+    <section class="search">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquise sua dúvida..." onkeyup="searchHelp()">
+            <button>Pesquisar</button>
+        </div>
+    </section>
+
+    <!-- Categorias de Ajuda -->
+    <section class="categories" id="categories">
+        <div class="category-item" data-category="conta-login">
+            <h4>O que é o SportMap?</h4>
+            <p>O SportMap é uma plataforma para encontrar lugares gratuitos para praticar esportes.</p>
+        </div>
+
+        <div class="category-item" data-category="conta-login">
+            <h4>Como posso encontrar o local ideal para praticar esportes?</h4>
+            <p>Você pode usar o mapa interativo e os filtros para encontrar o local perfeito para o seu esporte favorito.</p>
+        </div>
+
+        <div class="category-item" data-category="seguranca">
+            <h4>Preciso pagar para utilizar os locais encontrados?</h4>
+            <p>Não, todos os locais listados no SportMap são gratuitos para utilização.</p>
+        </div>
+
+        <div class="category-item" data-category="seguranca">
+            <h4>Como posso me cadastrar ou fazer login?</h4>
+            <p>Você pode acessar a seção de "usuário" para se cadastrar ou fazer login no site.</p>
+        </div>
+
+        <div class="category-item" data-category="seguranca">
+            <h4>Onde posso encontrar mais informações sobre o site e seus desenvolvedores?</h4>
+            <p>A seção "Sobre Nós" oferece informações sobre os desenvolvedores e o propósito do site.</p>
+        </div>
+
+        <div class="category-item" data-category="pagamento">
+            <h4>Quais patrocinadores estão apoiando o SportMap?</h4>
+            <p>Os patrocinadores incluem o Serrano Futebol Clube, Prefeitura de Petrópolis e Korper Academia.</p>
+        </div>
+
+        <div class="category-item" data-category="suporte-tecnico">
+            <h4>Como posso entrar em contato com o suporte?</h4>
+            <p>Você pode entrar em contato com o suporte através do telefone (24) 999556677.</p>
+        </div>
+
+        <div class="category-item" data-category="politica-privacidade">
+            <h4>Como posso saber mais sobre os termos de uso do site?</h4>
+            <p>Para entender as condições de uso, consulte a seção "Termos" no rodapé do site.</p>
+        </div>
+
+        <div class="category-item" data-category="suporte-tecnico">
+            <h4>Posso acessar o SportMap em dispositivos móveis?</h4>
+            <p>Sim, o SportMap é totalmente responsivo e pode ser acessado de smartphones e tablets.</p>
+        </div>
+    </section>
+
+    <script>
+        // Função de pesquisa
+        function searchHelp() {
+            var input, filter, categories, categoryItems, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            categories = document.getElementById("categories");
+            categoryItems = categories.getElementsByClassName('category-item');
+
+            for (i = 0; i < categoryItems.length; i++) {
+                txtValue = categoryItems[i].textContent || categoryItems[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    categoryItems[i].style.display = "";
+                } else {
+                    categoryItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

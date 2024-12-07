@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportMap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+<header>
+    <div id="logo">
+        <a href="index.html">
+            <img src="img/logobranca.png" alt="Logo SportMap">
+        </a>
+    </div>
+    <h3 class="texto1">
+        <span class="verde">Encontre</span> o lugar perfeito para a prática de <span class="verde">Exercícios Físicos</span>
+    </h3>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="bola-icon"><img src="img/icon.png" alt="Esportes com Bola"></a></li>
+            <li><a href="#" id="bike-icon"><img src="img/icon1.png" alt="Ciclismo"></a></li>
+            <li><a href="#" id="corrida-icon"><img src="img/icon2.png" alt="Corrida"></a></li>
+            <li><a href="#" id="gym-icon"><img src="img/icon3.png" alt="Academia"></a></li>
+            <li><a href="#" id="danca-icon"><img src="img/icon4.png" alt="Dança"></a></li>
+            <li><a href="#" id="boxe-icon"><img src="img/icon5.png" alt="Esportes de Luta"></a></li>
+        </ul>
+    </nav>
+    
+    <div class="botoes">
+        <ul>
+            <li><a href="Navegações/cadastro.html"><img src="img/icon6.png" alt="usuario"></a></li>
+            <li><a href="#" id="configuracoes-icon"><img src="img/icon7.png" alt="configuracoes"></a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Aba Lateral (inicialmente oculta) -->
+<div id="sideNav" class="side-nav">
+    <div class="side-nav-header">
+        <button id="closeBtn" class="close-btn">&times;</button> <!-- Botão de fechar -->
+    </div>
+    <div class="side-nav-content">
+        <ul>
+            <li><a href="Navegações/sobre.html">Sobre Nós</a></li>
+            <li><a href="Navegações/ajuda.html">Ajuda</a></li>
+            <li><a href="Navegações/termos.html">Termos</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<section>
+    <h3 class="texto2">
+        Nosso site é o seu guia para uma vida <span class="verde">ativa</span>, conectando você aos espaços perfeitos para exercitar-se <span class="verde">sem custo</span> e aproveitar todos os benefícios de um estilo de <span class="verde">vida saudável</span>.
+    </h3>
+    <div id="map"></div>
+</section>
+
+<footer>
+    <div class="patrocinadores">
+        <h3>Patrocinadores</h3>
+        <div class="picons">
+            <a href="https://www.serranofcrj.com.br/" target="_blank">
+                <img src="img/p1.png" alt="Patrocinador 1">
+            </a>
+            <a href="https://www.petropolis.rj.gov.br/pmp/" target="_blank">
+                <img src="img/p2.png" alt="Patrocinador 2">
+            </a>
+            <a href="http://www.korperacademia.com.br/" target="_blank">
+                <img src="img/p3.png" alt="Patrocinador 3">
+            </a>
+        </div>
+    </div>
+    
+    <div class="sections">
+        <div class="section">
+            <h5><a href="Navegações/sobre.html" target="_self">Sobre Nós</a></h5>
+            <p>Este site foi criado por alunos do Firjan Senai Petópolis, como projeto integrador. </p>
+        </div>
+        <div class="section">
+            <h5><a href="Navegações/ajuda.html" target="_self">Central de Ajuda</a></h5>
+            <p>Suporte digital<br>
+                Telefone para contato (24) 999556677 </p>
+        </div>
+        <div class="section">
+            <h5><a href="Navegações/termos.html" target="_self">Termos</a></h5>
+            <p> Condições de uso do site<br>
+                Termos e Condições<br>
+                Política de Privacidade</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
